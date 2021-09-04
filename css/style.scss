@@ -1,19 +1,29 @@
 :root {
     --primary-font: 'Roboto Mono', monospace;
     --alt-font: 'Montserrat', sans-serif;
-    --primary-text-color: #888888;
-    --light-text-color: #ccc;
-    --primary-bg: #222;
-    --hero-bg: rgba(0, 0, 0, 0.4);
+    --primary-text-color: #010B14;
+    --primary-bg: #f1f1f1;
+
+    --hero-bg: rgba(255, 255, 255, 0.6);
     --slider-color: #111;
+    --green: #00A676;
+    --dark-green: #007A58;
 }
 
-body.light {
-    --primary-text-color: #222;
-    --light-text-color: #333;
-    --primary-bg: #888888;
-    --hero-bg: rgba(255, 255, 255, 0.4);
+body.dark {
+    --primary-text-color: #f1f1f1;
+    --primary-bg: #010B14;
+    --hero-bg: rgba(0, 0, 0, 0.4);
     --slider-color: #555;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-text-color: #f1f1f1;
+        --primary-bg: #010B14;
+        --hero-bg: rgba(0, 0, 0, 0.4);
+        --slider-color: #555;
+    }
 }
 
 *,
@@ -25,11 +35,11 @@ body.light {
 }
 
 section {
-    margin: 3rem 0;
+    padding: min(8vh, 4rem) 0;
 
-    @media only screen and (min-width:40em) {
-        margin: 5rem 0;
-    }
+    // @media only screen and (min-width:40em) {
+    //     padding: 5rem 0;
+    // }
 }
 
 html {
@@ -45,7 +55,7 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1160px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -86,6 +96,14 @@ h2 {
     }
 }
 
+a {
+    color: var(--green);
+    text-decoration: none;
+    &:hover{
+        color:var(--dark-green);
+    }
+}
+
 .page-title {
     font-size: 4rem;
     margin: 0 0 .2em;
@@ -103,32 +121,10 @@ h2 {
 .site-header {
     padding: 20px 0;
     position: relative;
-    // z-index: 5;
-
-    &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top:0;
-        bottom: 0;
-        right: 0;
-        left:0;
-        background: rgba(0, 0, 0, 0.4);
-        z-index: -1;
-    }
 
     .container {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-    }
-}
-
-#theme-toggle {
-    display: none;
-
-    &:checked + .slider {
-        transform: translate(25px , -50%);
     }
 }
 
@@ -139,6 +135,20 @@ h2 {
     background: #333;
     position: relative;
     cursor: pointer;
+    display: none;
+
+    @media only screen and (min-width:40em) {
+        display: block;
+    }
+}
+
+#theme-toggle {
+    display: none;
+
+    &:checked+.slider {
+        transform: translate(25px, -50%);
+        background: #222;
+    }
 }
 
 .slider {
@@ -146,16 +156,51 @@ h2 {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: var(--slider-color);
+    background: #888;
     position: absolute;
-    top:50%;
-    left:5px;
-    transform: translate(0 , -50%);
+    top: 50%;
+    left: 5px;
+    transform: translate(0, -50%);
     transition: transform 150ms ease;
 }
 
-.hero-image-wrapper {
-    filter: blur(2px);
+.site-navigation {
+    display: none;
+    margin-left: auto;
+    margin-right: 50px;
+
+    ul {
+        display: flex;
+        list-style: none;
+    }
+
+    li {
+        margin-right: 40px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+    a{
+        font-weight: 600;
+        font-family: var(--alt-font);
+    }
+
+    @media only screen and (min-width:40em) {
+        display: block;
+    }
+}
+
+.mob-navigation {
+    @media only screen and (min-width:40em) {
+        display: none;
+    }
+}
+
+.mob-menu-toggle {
+    @media only screen and (min-width:40em) {
+        display: none;
+    }
 }
 
 .hero {
@@ -173,23 +218,24 @@ h2 {
     }
 }
 
-.hero-bg-image{
+.hero-bg-image {
     position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
     right: 0;
-    left:0;
+    left: 0;
     z-index: -1;
     filter: blur(2px);
+    transform: scale(1.02);
 
     &:before {
         content: "";
         display: block;
         position: absolute;
-        top:0;
+        top: 0;
         bottom: 0;
         right: 0;
-        left:0;
+        left: 0;
         z-index: 1;
         background: var(--hero-bg);
     }
@@ -203,7 +249,6 @@ h2 {
 }
 
 .hero-text {
-    color: var(--light-text-color);
 
     @media only screen and (min-width:40em) {
         p {
@@ -214,6 +259,6 @@ h2 {
 
 }
 
-.about-text{
+.about-text {
     margin-bottom: 2rem;
 }

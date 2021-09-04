@@ -7,7 +7,7 @@
     <title>Giannis Koulouris | Web Developer</title>
     
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,11 +20,41 @@
     <header class="site-header">
         <div class="container">
             <h1 class="logo">Giannis Koulouris</h1>
+            <nav class="site-navigation">
+                <ul>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
             <label class="theme-toggle-wrapper">
                 <input id="theme-toggle" class="toggle" type="checkbox" role="switch">
                 <span class="slider"></span>
             </label>
+            
+            <button class="burger-menu mob-menu-toggle"></button>
         </div>
+
+        <nav class="mob-navigation">
+            <ul>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main>
