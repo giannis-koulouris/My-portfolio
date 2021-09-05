@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giannis Koulouris | Web Developer</title>
     
+    <meta name="description" content="My Name is Giannis Koulouris and I’m a front-end Web Developer based in Corfu, Greece.">
 
     <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="/swiper/swiper-bundle.min.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,400&family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <script src="index.js" defer></script>
+    <script src="/swiper/swiper-bundle.min.js" defer></script>
+
 </head>
 <body>
 
@@ -26,7 +31,7 @@
                         <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="#projects">Projects</a>
+                        <a href="#experience">Work Experience</a>
                     </li>
                     <li>
                         <a href="#contact">Contact</a>
@@ -39,7 +44,12 @@
                 <span class="slider"></span>
             </label>
             
-            <button class="burger-menu mob-menu-toggle"></button>
+            <button class="burger-menu mob-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
 
         <nav class="mob-navigation">
@@ -48,7 +58,7 @@
                     <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="#projects">Projects</a>
+                    <a href="#experience">Work Experience</a>
                 </li>
                 <li>
                     <a href="#contact">Contact</a>
@@ -64,80 +74,166 @@
             <div class="container">
                 <h2 class="page-title">Hello!</h2>
                 <div class="hero-text">
-                    <p>My Name is Giannis Koulouris and I’m a front-end Web Developer based in Corfu, Greece. </p>
+                    <p>My Name is Giannis Koulouris and I’m a front-end Web Developer based in Corfu, Greece.</p>
                 </div>
             </div>
         </section>
 
         <section id="about" class="about">
             <div class="container">
+
                 <div class="about-text">
                     <h2>About me</h2>
                     <p>
-                        I have over 3 years of experience developing custom WordPress & Woocommerce websites.
+                        My interest in web development started back in college, when I created my first HTML website in Interent Programming class. It was 
+                        something very simple (and ugly &#x1F605;), but It made me realize that this was what I wanted to pursue. 
+                    </p>
+                    <p>
+                        Fast forward to today, I have over 3 years of experience developing custom WordPress & Woocommerce websites. <br>
+                        <!-- I've developed websites for numerous types of businesses, from simple static websites, to eshops & car rentals. -->
                         I love front-end development and try to always stay up to date with the latest technologies & best practices.
                     </p>
-                    <p>
-                        I take a keen interest in keeping up to date with new technologies by taking Online Courses (Currently learning React.js)
-                    </p>
-                    <p></p>
                 </div>
 
-                <div class="work-experienece">
-                    <h3 class="section-title">Work Experience</h3>
-                    <p>
-                        For the past years I’ve been working as a web developer for a WordPress agency in Greece, developing custom WordPress & Woocommerce websites from scratch.
-                    </p>
-                    <strong>Main Responsibilities:</strong>
-                    <ul>
-                        <li>Development of custom WordPress & Woocommerce websites using ACF.</li>
-                        <li>Collaborating with both designers and other developers – translating design (adobe XD) files into responsive, mobile first, cross-browser compatible websites.</li>
-                    </ul>
-                    <p>I am very passionate about coding. I consistently invest time in learning new technologies both in my current full time role and also by developing websites for clients on a consulting basis. </p>
-                    <p>
-                        na mpei go creations experience + na parw ideess apo job adds 
-                    </p>
-                    <p>
-                        Collaborating with both designers and other developers – translating design files into responsive, mobile first, cross-browser compatible websites.
-                    </p>
-                    <p>NA VALW ANIMATIONS -- USE GSAP</p>
+                <div class="skills-wrapper about-section">
+                    <h3 class="about-section-title">Skills</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="/images/skills/html.png" alt="HTML"></div>
+                            <span class="skill-title">HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="/images/skills/css.png" alt="CSS"></div>
+                            <span class="skill-title">CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="/images/skills/js.png" alt="js"></div>
+                            <span class="skill-title">Javascript</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="/images/skills/jquery.png" alt="jquery"></div>
+                            <span class="skill-title">jQuery</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="/images/skills/php.png" alt="PHP"></div>
+                            <span class="skill-title">PHP</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="/images/skills/wp.png" alt="wp"></div>
+                            <span class="skill-title">WordPress</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="/images/skills/wc.png" alt="wc"></div>
+                            <span class="skill-title">WooCommerce</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><img src="/images/skills/sass.png" alt="sass"></div>
+                            <span class="skill-title">SASS/LESS</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="expertise">
-                    <h3 class="section-title">My Expertise</h3>
-                    <p>diaforetiko xrwma, me icons klp</p>
-                    <p>na mpei koumpi gia download cv</p>
+                <div class="experience-wrapper about-section" id="experience">
+                    <h3 class="about-section-title">Work Experience</h3>
+                    
+                    <div class="experience-item">
+                        <span class="experience-item__title">go creations</span>
+                        <p>
+                            For the past years I’ve been working as a web developer for a WordPress agency in Greece, 
+                            developing custom WordPress & Woocommerce websites.
+                        </p>
+                        
+                        <div class="responsibilities">
+                            <span class="responsibilities-title">Main Responsibilities:</span>
+                            <ul>
+                                <li>Development of custom WordPress & Woocommerce websites from scratch, using ACF.</li>
+                                <li>Collaborating with both designers and other developers – translating design (Adobe XD) files into responsive, mobile first, cross-browser compatible websites.</li>
+                                <li>Maintainance & optimisation of existing websites.</li>
+                                <li>Writing clean & maintanable code</li>
+                                <li>Managing my own workflow and being responsible to deliver projects on time.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="projects-wrapper">
+                            <span class="projects-title">Some websites I developed while working at go creations:</span>
+
+                            <div class="swiper projects-slider">
+                                <div class="swiper-wrapper">
+    
+                                    <div class="swiper-slide project-slide">
+                                        <a href="https://travelco.gr/" target="_blank" rel="noreferrer noopener" class="project-slide__image">
+                                            <img src="/images/projects/travelco.jpg" alt="travelco">
+                                        </a>
+                                        <span class="btn">See More</span>
+                                    </div>
+    
+                                    <div class="swiper-slide project-slide">
+                                        <a href="https://corfuguardsecurity.com/" target="_blank" rel="noreferrer noopener" class="project-slide__image">
+                                            <img src="/images/projects/cgs.jpg" alt="cgs">
+                                        </a>
+                                        <span class="btn">See More</span>
+                                    </div>
+    
+                                    <div class="swiper-slide project-slide">
+                                        <a href="https://thecorfuexperience.com/" target="_blank" rel="noreferrer noopener" class="project-slide__image">
+                                            <img src="/images/projects/tce.jpg" alt="tce">
+                                        </a>
+                                        <span class="btn">See More</span>
+                                    </div>
+    
+                                    <div class="swiper-slide project-slide">
+                                        <a href="https://villainception.com/" target="_blank" rel="noreferrer noopener" class="project-slide__image">
+                                            <img src="/images/projects/villainception.jpg" alt="villa inception">
+                                        </a>
+                                        <span class="btn">See More</span>
+                                    </div>
+    
+                                    <div class="swiper-slide project-slide">
+                                        <a href="https://aqualandcorfu.com/" target="_blank" rel="noreferrer noopener" class="project-slide__image">
+                                            <img src="/images/projects/aqualand.jpg" alt="aqualand">
+                                        </a>
+                                        <span class="btn">See More</span>
+                                    </div>
+
+                                    <div class="swiper-slide project-slide">
+                                        <a href="https://kumquat.gr/refreshments/en/" target="_blank" rel="noreferrer noopener" class="project-slide__image">
+                                            <img src="/images/projects/kumquat.jpg" alt="kumquat">
+                                        </a>
+                                        <span class="btn">See More</span>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+
                 </div>
+
             </div>
         </section>
-
-        <section class="projects" id="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <p>Να φαίνεται ότι είναι από go creations</p>
-                <p>na einai pinned scrolling me gsap scrolltrigger gia ta projects</p>
-                <p>na dw mipws valw swiper pou na ginetai me scroll + animation</p>
-            </div>
-        </section>
+        
 
         <section class="contact" id="contact">
             <div class="container">
-                <h2>get in touch</h2>
-                <p> Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
-                <p>na mpoun social icons sto plai -- mobile view na einai katw</p>
-
-                <hr>
-                <p>
-                    να ενημερώσω το CV με πιο σωστά go creations responsibilities, να βάλω μια ακόμα πρόταση στο intro και να μπει και το site στο contact section
-                </p>
-                <p>na fugei to React basics kai na ginei experience with React</p>
-                
+                <h2>Get in touch</h2>
+                <p class="contact-text"> Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
+                <a class="btn btn--ghost" href="mailto:gianniskoulouris@outlook.com">Contact me</a>
             </div>
         </section>
 
     </main>
 
-    <footer></footer>
+    <footer>
+        <div class="container">
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/giannis-koulouris/" target="_blank" rel="noopener noreferrer"><i class="icon-linkedin"></i></a>
+                <a href="https://twitter.com/john_koulouris" target="_blank" rel="noopener noreferrer"><i class="icon-twitter"></i></a>
+                <a href="https://github.com/giannis-koulouris" target="_blank" rel="noopener noreferrer"><i class="icon-github"></i></a>
+                <a href="https://codepen.io/GiannisK" target="_blank" rel="noopener noreferrer"><i class="icon-codepen"></i></a>
+            </div>
+        </div>
+    </footer>
 
     
 </body>
